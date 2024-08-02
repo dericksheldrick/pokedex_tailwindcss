@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="bg-green-300 text-green-900 p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Pokedex</h1>
+        <div class="flex justify-between items-center m-4">
+          <input
+            type="text"
+            id="search"
+            class="border p-2 w-full max-w-xs rounded-lg"
+            placeholder="Search Pokemon"
+          />
+        </div>
+      </div>
+    </header>
+    <main class="container mx-auto p-4">
+      <div
+        id="pokemon-list"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+      >
+        <!-- Pokemon cards will be injected here by JavaScript -->
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <button
+          id="prev"
+          class="bg-green-300 text-green-900 p-2 rounded disabled:opacity-50"
+        >
+          Previous
+        </button>
+        <button id="next" class="bg-green-300 text-green-900 p-2 rounded">
+          Next
+        </button>
+      </div>
+    </main>
+
+    <div
+      id="pokemon-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center"
+    >
+      <div class="bg-white p-4 rounded-lg max-w-md w-full">
+        <button
+          id="close-modal"
+          class="float-right bg-red-600 text-white px-2 py-1 rounded"
+        >
+          X
+        </button>
+        <div id="modal-content" class="text-center">
+          <!-- Pokemon details will be injected here by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
